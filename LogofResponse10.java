@@ -11,7 +11,7 @@ public class LogofResponse10 {
    @Test
    public void responselog(){
         
-        Response res = given().when().get("https://reqres.in/api/users?page=2");
+        Response res = given().when().get("https://reqres.in/api/users");
         res.then().log().all();
 
     }

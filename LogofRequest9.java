@@ -9,7 +9,7 @@ public class LogofRequest9 {
 
     @Test
     public void requestlog(){
-        Response res = given().when().log().all().get("https://reqres.in/api/users?page=2");
+        Response res = given().when().log().all().get("https://reqres.in/api/users");
         System.out.println("res =" +res.getBody().prettyPrint());
     }
 }

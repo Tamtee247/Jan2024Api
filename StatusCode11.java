@@ -12,5 +12,5 @@ public class StatusCode11 {
         Response res =given().when().post("https://reqres.in/api/users");
 
         System.out.println(res.getBody().prettyPrint());
-        res.then().statusCode(200);
-}}
+        res.then().log().ifStatusCodeIsEqualTo(200);
+    }}

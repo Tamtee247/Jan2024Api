@@ -12,8 +12,8 @@ public class IndexResponse5 {
         RestAssured.baseURI="https://restful-booker.herokuapp.com/";
         Response response = (Response) given().queryParam
                 ("viewport", "width=device-width, initial-scale=1").header("Content-Type","text/html; charset=UTF-8");
-        when().get("herokuapp.com/");
-        String page1=response.htmlPath().getString("total[1].pages");
+        when().get("https://restful-booker.herokuapp.com/");
+        String page1=response.jsonPath().getString("total[1].pages");
         System.out.println("page1 ="+page1);
 }
 }

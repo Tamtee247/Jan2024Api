@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.*;
 public class Index5 {
 
     @Test
-    public void index5() {
+    public void Index5() {
         RestAssured.baseURI="https://restful-booker.herokuapp.com/";
         Response response = (Response) given().queryParam
                 ("stylesheet").header("Content-Type","text/html; charset=UTF-8");

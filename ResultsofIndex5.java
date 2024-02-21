@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class index5 {
+public class ResultsofIndex5 {
 
     @Test
     public void Index5() {

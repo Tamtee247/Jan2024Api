@@ -6,7 +6,8 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class IndexResponse5 {
+public class Index5 {
+
     @Test
     public void index5() {
         RestAssured.baseURI="https://fonts.googleapis.com/css?family=Cabin";

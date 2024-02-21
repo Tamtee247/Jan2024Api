@@ -9,10 +9,10 @@ import static io.restassured.RestAssured.*;
 public class IndexResponse5 {
     @Test
     public void index5() {
-        RestAssured.baseURI="https://restful-booker.herokuapp.com/";
+        RestAssured.baseURI="https://fonts.googleapis.com/css?family=Cabin";
         Response response = (Response) given().queryParam
-                ("viewport", "width=device-width, initial-scale=1").header("Content-Type","text/html; charset=UTF-8");
-        when().get("https://restful-booker.herokuapp.com/");
+                ("stylesheet").header("Content-Type","text/html; charset=UTF-8");
+        when().get("https://fonts.googleapis.com/css?family=Cabin");
         String page1=response.jsonPath().getString("total[1].pages");
         System.out.println("page1 ="+page1);
 }

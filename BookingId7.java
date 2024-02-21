@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class ValueofBookingId7 {
+public class BookingId7 {
 
     @Test
     public void ValueofBookingid7(){

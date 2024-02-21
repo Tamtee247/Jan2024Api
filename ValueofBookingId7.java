@@ -7,7 +7,7 @@ public class ValueofBookingId7 {
 
     @Test
     public void firstbookingid(){
-        RestAssured.baseURI="https://reqres.in/api/users";
+        RestAssured.baseURI="https://restful-booker.herokuapp.com/;
         String firstbookingid = RestAssured.given().queryParam("id").when().get().then().statusCode(200)
                 .extract().jsonPath().getString("id");
         System.out.println("id");

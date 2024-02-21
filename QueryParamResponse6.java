@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 public class QueryParamResponse6 {
     @Test
     public void responsebodyqueryparameter(){
-        Response res = given().queryParam("id").when().get("https://reqres.in/api/users");
+        Response res = given().queryParam("id").when().get("https://restful-booker.herokuapp.com/");
         System.out.println(res.getBody().asString());
     }
 }

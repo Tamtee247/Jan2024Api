@@ -13,7 +13,7 @@ public class Index5 {
         RestAssured.baseURI="https://restful-booker.herokuapp.com/";
         Response response = (Response) given().queryParam
                 ("stylesheet").header("Content-Type","text/html; charset=UTF-8");
-        when().get("https://fonts.googleapis.com/css?family=Cabin");
+        when().get("https://restful-booker.herokuapp.com/");
         String page1=response.jsonPath().getString("total[1].pages");
         System.out.println("page1 ="+page1);
 }

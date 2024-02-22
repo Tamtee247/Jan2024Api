@@ -5,9 +5,10 @@ import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 
+
 import static io.restassured.RestAssured.*;
 
-public class Index5 {
+public class Index5data {
 
     @Test
     public void ResultsofIndex5() {

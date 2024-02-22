@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class IdRespBody2 {
 
-    @Test(priority =2)
+    @Test
     public void valueofid(){
 //Q2. Print the value of id from response body.
         RestAssured.baseURI = "https://reqres.in/api/users";

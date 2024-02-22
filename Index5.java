@@ -8,15 +8,16 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class Index5data {
+public class Index5 {
 
     @Test
     public void ResultsofIndex5() {
         RestAssured.baseURI="https://reqres.in/api/users";
         Response response = (Response) given().queryParam
                 ("data.id","1").header("Content-Type","application/json; charset=UTF-8");
-        String data1 = null;
-        System.out.println("data.1 ="+data1);
+        when().get("api/users");
+        String data1 =response.jsonPath().getString("data.id");
+        System.out.println("data.id ="+data1);
 }
 }
 

@@ -18,8 +18,8 @@ public class Fetchthe5thindex {
                 .header("Content-Type","application/json; charset=UTF-8");
         when().get("api/users");
         System.out.println(" response string =" + response.getBody().asString());
-        String data1 = response.jsonPath().getString("data[1].last_name");
-        System.out.println("data.last_name=" + data1.indexOf(2));
+        String name1=response.jsonPath().getString("result[1].name");
+        System.out.println("name1 ="+name1);
 }
 }
 

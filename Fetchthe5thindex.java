@@ -14,7 +14,7 @@ public class Fetchthe5thindex {
         Response response =
                 (Response) given().queryParam("name","Janet")
                 .header("Content-Type","application/json; charset=UTF-8");
-        when().get("/api/users/");
+        when().get("api/users/2");
         System.out.println(" response string" + response.getBody().asString());
         String name1 =response.jsonPath().getString("Janet");
         System.out.println("name1=" +name1);

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class Index5 {
+public class ShowingofIndex5 {
 
     @Test
     public void ResultsofIndex5() {

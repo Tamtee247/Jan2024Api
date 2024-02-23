@@ -7,17 +7,17 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
-public class Fetchthe5thindex {
+public class KeyValuepair5 {
 
     @Test
-    public void ResultsofIndex5() {
+    public void ResultsofKeyvalue5() {
         RestAssured.baseURI="https://emailvalidation.abstractapi.com/v1/?api_key=cc9c55a436ef4300bfe9d9704f1dd31a&email=tamleonard1@gmail.com";
         Response response =
-                (Response) given().queryParam("api_key","cc9c55a436ef4300bfe9d9704f1dd31a")
-                .header("Content-Type","application/json; charset=UTF-8");
+                (Response) given().queryParam("api_key","cc9c55a436ef4300bfe9d9704f1dd31a&")
+                .header("Content-Type","application/json");
         when().get("https://emailvalidation.abstractapi.com/v1");
         System.out.println("response String =" + response.getBody().asString());
-        System.out.println("quality_score= 0.95"); 
+        System.out.println("Is_mx_found.value");
 
 }
 }

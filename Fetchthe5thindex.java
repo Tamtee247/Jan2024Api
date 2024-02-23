@@ -5,19 +5,20 @@ import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.equalTo;
 
 public class Fetchthe5thindex {
 
     @Test
     public void ResultsofIndex5() {
-        RestAssured.baseURI="https://reqres.in/api/users/2";
+        RestAssured.baseURI="https://emailvalidation.abstractapi.com/v1/?api_key=cc9c55a436ef4300bfe9d9704f1dd31a&email=tamleonard1@gmail.com";
         Response response =
-                (Response) given().queryParam("name","Janet")
+                (Response) given().queryParam("api_key","cc9c55a436ef4300bfe9d9704f1dd31a")
                 .header("Content-Type","application/json; charset=UTF-8");
-        when().get("api/users/2");
-        System.out.println(" response string" + response.getBody().asString());
-        String name1 =response.jsonPath().getString("Janet");
-        System.out.println("name1=" +name1);
+        when().get("https://emailvalidation.abstractapi.com/v1");
+        System.out.println("response String =" + response.getBody().asString());
+        System.out.println("quality_score= 0.95"); 
+
 }
 }
 

@@ -4,8 +4,8 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.equalTo;
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.when;
 
 public class KeyValuepair5 {
 
@@ -15,9 +15,9 @@ public class KeyValuepair5 {
         Response response =
                 (Response) given().queryParam("api_key","cc9c55a436ef4300bfe9d9704f1dd31a&")
                 .header("Content-Type","application/json");
-        when().get("https://emailvalidation.abstractapi.com/v1");
+        when().get("v1");
         System.out.println("response String =" + response.getBody().asString());
-        System.out.println("Is_mx_found.value");
+        System.out.println("Is_mx_found.value.text");
 
 }
 }

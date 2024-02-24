@@ -2,7 +2,8 @@ package Jan2024Api;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.Test;
+import org.testng.annotations.Test;
+
 
 import java.util.HashMap;
 

@@ -7,18 +7,20 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
+import static java.nio.file.Paths.get;
 
 
 public class Valueofquest5 {
 
     @Test
     public void valueofquest5() {
-        RestAssured.baseURI="https://emailvalidation.abstractapi.com/v1/?api_key=cc9c55a436ef4300bfe9d9704f1dd31a&email=tamleonard1@gmail.com";
-        Response response = (Response) given().queryParam("api_key","cc9c55a436ef4300bfe9d9704f1dd31a&").header("Content-Type","application/json");
-        when().get("v1");
-        RestAssured.baseURI= response.jsonPath().getString("Is_mx_found.value");
-        System.out.println("is_mx_found");
-        System.out.println("value:true");
-        System.out.println("text:True");
+        RestAssured.baseURI="https://reqres.in/api/users";
+        Response response = (Response) given().queryParam("name","Charles").header("Content-Type","application/json");
+        get("/v1/search"); System.out.println("string id =" + response.getBody().asString());
+        String id= response.jsonPath().getString("result.id");
+        System.out.println("id ="+ id);
+
+
+
     }}
 

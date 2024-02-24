@@ -16,8 +16,8 @@ public class Valueofquest5 {
         RestAssured.baseURI="https://reqres.in/api/users";
         Response response = (Response) given().queryParam("name","Charles").header("Content-Type","application/json");
         when().get("/v1/search"); System.out.println("string id =" + response.getBody().asString());
-        String id= response.jsonPath().getString("result.id");
-        System.out.println("id ="+ id);
+        String name5 =response.jsonPath().getString("results[5].name");
+        System.out.println("name1 = " + name5);
 
 
 

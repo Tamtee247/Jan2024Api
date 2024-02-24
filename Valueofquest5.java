@@ -17,7 +17,7 @@ public class Valueofquest5 {
         Response response = (Response) given().queryParam("name","Charles").header("Content-Type","application/json");
         when().get("/v1/search"); System.out.println("string id =" + response.getBody().asString());
         String name5 =response.jsonPath().getString("results[5].name");
-        System.out.println("name1 = " + name5);
+        System.out.println("name5 = " + name5);
 
 
 

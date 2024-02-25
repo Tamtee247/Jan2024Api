@@ -13,7 +13,7 @@ public class ValueofId4 {
         Response response= given().queryParam("name","George").header("Content-Type","application/json").when()
                 .get("/v1/search"); System.out.println("string id =" + response.getBody().asString());
         String id= response.jsonPath().getString("result.id");
-        System.out.println("id ="+ id);
+        System.out.println("result.id ="+ id);
 
     }
 }

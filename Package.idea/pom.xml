@@ -7,10 +7,7 @@
 <groupId>org.example</groupId>
 <artifactId>Jan2024Api</artifactId>
 <version>1.0-SNAPSHOT</version>
-<packaging>pom</packaging>
-<modules>
-<module>Jan2024Api/Package.idea</module>
-</modules>
+    <packaging>pom</packaging>
 
 <properties>
 <maven.compiler.source>17</maven.compiler.source>

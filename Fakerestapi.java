@@ -15,13 +15,13 @@ public class Fakerestapi {
 
     @Test
     public void getStatusCode() {
-        Response res = given().when().get("https://fakerestapi.azurewebsites.net/index.html ");
+        Response res = given().when().get("https://fakerestapi.azurewebsites.net/api/v1/Activities ");
         System.out.println("status code = " + res.getStatusCode());
     }
 
     @Test
     public void getidresponse() {
-        Response res = given().when().get("https://fakerestapi.azurewebsites.net/index.html ");
+        Response res = given().when().get("https://fakerestapi.azurewebsites.net/api/v1/Activities ");
         System.out.println("id = " + id());
 
     }

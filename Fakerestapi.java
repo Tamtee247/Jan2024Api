@@ -8,15 +8,21 @@ public class Fakerestapi {
 
     @Test(priority = 1)
     public void printBody() {
-        Response res = given().when().get("https://fakerestapi.azurewebsites.net/index.html ");
+        Response res = given().when().get("https://fakerestapi.azurewebsites.net/api/v1/Activities ");
         System.out.println("res = " + res.getBody().asString());
     }
 
 
     @Test
-    public void getStatusCode() {
+    public void getlistofauthors() {
         Response res = given().when().get("https://fakerestapi.azurewebsites.net/api/v1/Activities ");
-        System.out.println("status code = " + res.getStatusCode());
+        System.out.println("list of authors = " + listofauthors());
+    }
+
+    public String listofauthors() {
+        System.out.println("list of authors");
+
+        return null;
     }
 
     @Test

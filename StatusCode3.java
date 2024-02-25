@@ -14,6 +14,7 @@ public class StatusCode3 {
 
             System.out.println(res.getBody().prettyPrint());
             res.then().log().ifStatusCodeIsEqualTo(200);
+            System.out.println("200");
 
         }
     }

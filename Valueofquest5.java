@@ -17,7 +17,7 @@ public class Valueofquest5 {
     @Test
     public void valueofquest5() {
         RestAssured.baseURI = "https://reqres.in/api/users";
-        Response res = given().queryParam("name","Janet").header("Content-Type","application/json").when().post("/v1/search");
+        Response res = given().queryParam("name","Charles").header("Content-Type","application/json").when().post("/v1/search");
         System.out.println("id:5");
         System.out.println("Charles Morris");
         System.out.println("email:charlesmorris@reqres.in");

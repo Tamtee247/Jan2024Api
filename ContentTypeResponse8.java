@@ -2,6 +2,7 @@ package Jan2024Api;
 
 
 import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import org.testng.annotations.Test;
 
 
@@ -14,7 +15,7 @@ public class ContentTypeResponse8 {
     public void ContentType(){
         Response res = given().when().get("https://restful-booker.herokuapp.com/");
         System.out.println(res.getBody().prettyPrint());
-        res.then().statusCode(200).header("Content-Type", ("application/json; charset=utf-8"));
+        ValidatableResponse header = res.then().statusCode(200).header("Content-Type", ("text/html; charset=utf-8"));
     }
     }
 

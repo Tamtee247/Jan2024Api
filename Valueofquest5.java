@@ -2,6 +2,8 @@ package Jan2024Api;
 
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.internal.RestAssuredResponseOptionsImpl;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
@@ -13,13 +15,12 @@ import static io.restassured.RestAssured.when;
 public class Valueofquest5 {
 
     @Test
-    public void indexofquest5() {
-        RestAssured.baseURI="https://restful-booker.herokuapp.com/";
-        Response response = (Response) given().queryParam("id").header("Content-Type","application/json");
-        when().get("v1/search");
-        String name1=response.jsonPath().getString("result[5].name");
-        System.out.println("name1 ="+name1);
-
+    public void valueofquest5() {
+        RestAssured.baseURI = "https://reqres.in/api/users";
+        Response res = given().queryParam("name","Janet").header("Content-Type","application/json").when().post("/v1/search");
+        System.out.println("Janet Waver");
+        System.out.println("res = "+res.getBody());
+        System.out.println("res as string =" +res.getBody());
 
     }
 }

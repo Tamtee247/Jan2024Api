@@ -15,7 +15,8 @@ public class ContentTypeResponse8 {
     public void ContentType(){
         Response res = given().when().get("https://restful-booker.herokuapp.com/");
         System.out.println(res.getBody().prettyPrint());
-        ValidatableResponse header = res.then().statusCode(200).header("Content-Type", ("text/html; charset=utf-8"));
+       res.then().statusCode(200)
+                .header("Content-Type", "text/html; charset=UTF-8");
     }
     }
 
